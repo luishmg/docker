@@ -1,6 +1,6 @@
 FROM python:latest
 
-RUN mkdir /mnt/files && \
+RUN mkdir /mnt/mkdocs-page && \
     pip install mkdocs && \
     pip install mkdocs-material
 
