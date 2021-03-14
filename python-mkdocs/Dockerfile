@@ -8,4 +8,4 @@ WORKDIR /mnt/mkdocs-page
 
 EXPOSE 8000/tcp
 
-CMD mkdocs serve
+CMD mkdocs serve /mnt/mkdocs-page
