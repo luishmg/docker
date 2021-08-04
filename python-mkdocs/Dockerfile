@@ -1,4 +1,4 @@
-FROM python:latest
+FROM docker.io/python:latest
 
 RUN mkdir /mnt/mkdocs-page && \
     pip install mkdocs && \
