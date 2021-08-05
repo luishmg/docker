@@ -1,8 +1,9 @@
 FROM docker.io/python:latest
 
+COPY ./requirements.txt /tmp/requirements.txt
+
 RUN mkdir /mnt/mkdocs-page && \
-    pip install mkdocs && \
-    pip install mkdocs-material
+    pip install -r /tmp/requirements.txt
 
 WORKDIR /mnt/mkdocs-page
 
