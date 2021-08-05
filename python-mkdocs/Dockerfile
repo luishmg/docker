@@ -1,6 +1,6 @@
 FROM docker.io/python:latest
 
-COPY requirements.txt /tmp/requirements.txt
+COPY requirements.txt /tmp/
 
 RUN mkdir /mnt/mkdocs-page && \
     pip install -r /tmp/requirements.txt
