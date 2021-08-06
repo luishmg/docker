@@ -1,12 +1,9 @@
-FROM docker.io/python:latest
+FROM localhost/python/pycon:latest
 
-COPY ./requirements.txt /tmp/
-
-RUN mkdir /mnt/mkdocs-page && \
-    pip install -r /tmp/requirements.txt
+RUN mkdir /mnt/mkdocs-page
 
 WORKDIR /mnt/mkdocs-page
 
 EXPOSE 8000/tcp
 
-CMD ["mkdocs", "serve", "-a", "0.0.0.0:8000"]
+CMD ["bash", "-c", "pipenv install && pipenv run mkdocs serve -a 0.0.0.0:8000"]
